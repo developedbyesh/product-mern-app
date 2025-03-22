@@ -1,5 +1,12 @@
 import React from 'react';
-import { Button, Container, Flex, HStack, Text } from '@chakra-ui/react';
+import {
+  Button,
+  Center,
+  Container,
+  Flex,
+  HStack,
+  Text,
+} from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { CiSquarePlus } from 'react-icons/ci';
 import { useColorMode } from './ui/color-mode';
@@ -19,8 +26,16 @@ const Navbar = () => {
           sm: 'row',
         }}
       >
-        <Text>
-          <Link to={'/'}>Product Store</Link>
+        <Text
+          bgGradient="to-r"
+          gradientFrom="blue.200"
+          gradientTo="blue.500"
+          bgClip="text"
+          textAlign={'Center'}
+          fontSize="3xl"
+          fontWeight="bold"
+        >
+          <Link to={'/'}>Product Store 🛒</Link>
         </Text>
         <HStack>
           <Link to={'/create'}>
