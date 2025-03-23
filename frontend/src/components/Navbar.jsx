@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Button,
-  Center,
-  Container,
-  Flex,
-  HStack,
-  Text,
-} from '@chakra-ui/react';
+import { Button, Container, Flex, HStack, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { CiSquarePlus } from 'react-icons/ci';
 import { useColorMode } from './ui/color-mode';
