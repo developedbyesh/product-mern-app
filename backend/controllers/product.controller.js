@@ -26,7 +26,7 @@ export const createProduct = async (req, res) => {
     await newProduct.save();
     res.status(201).json({ success: true, data: newProduct });
   } catch (error) {
-    console.error('Error in Create Product:'.error.message);
+    console.error('Error in Create Product:', error.message);
     res.status(500).json({ success: false, message: 'Server Error' });
   }
 };
