@@ -9,10 +9,24 @@ import {
 import { useColorModeValue } from '../components/ui/color-mode';
 import { MdEdit, MdDelete } from 'react-icons/md';
 import React from 'react';
+import { useProductStore } from '../store/product.js';
+import { toaster } from '../components/ui/toaster.jsx';
 
 const ProductCard = ({ product }) => {
   const textColor = useColorModeValue('gray.600', 'gray.200');
   const bg = useColorModeValue('white', 'gray.800');
+
+  const { deleteProduct } = useProductStore();
+  const handleDeleteProduct = async (id) => {
+    const { success, message } = await deleteProduct(id);
+    toaster.create({
+      title: success ? 'Success' : 'Error',
+      description: message,
+      type: success ? 'success' : 'error',
+      duration: 5000,
+      isClosable: true,
+    });
+  };
   return (
     <Box
       shadow={'lg'}
@@ -40,7 +54,10 @@ const ProductCard = ({ product }) => {
           <IconButton colorPalette="blue">
             <MdEdit />
           </IconButton>
-          <IconButton colorPalette="red">
+          <IconButton
+            colorPalette="red"
+            onClick={() => handleDeleteProduct(product._id)}
+          >
             <MdDelete />
           </IconButton>
         </HStack>

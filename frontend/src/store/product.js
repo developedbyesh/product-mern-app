@@ -49,4 +49,20 @@ export const useProductStore = create((set) => ({
       console.error('Error fetching products:', error);
     }
   },
+  deleteProduct: async (id) => {
+    const res = await fetch(`/api/products/${id}`, {
+      method: 'DELETE',
+    });
+    if (!res.ok) {
+      throw new Error('Failed to delete product');
+    }
+
+    const data = await res.json();
+    if (!data.success) return { success: false, message: data.message };
+    // update the ui immmediately without needing a refresh
+    set((state) => ({
+      products: state.products.filter((product) => product._id !== id),
+    }));
+    return { success: true, message: data.message };
+  },
 }));
