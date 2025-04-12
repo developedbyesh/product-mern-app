@@ -42,7 +42,7 @@ const CreatePage = () => {
     <Container maxW={'container.sm'}>
       <VStack spacing={8}>
         <Heading as={'h1'} size={'2xl'} textAlign={'center'} mb={8}>
-          Create new Product
+          Add new Game
         </Heading>
         <Box
           width="50%"
@@ -53,7 +53,7 @@ const CreatePage = () => {
         >
           <VStack spacing={4}>
             <Input
-              placeholder="Product Name"
+              placeholder="Game Name"
               name="name"
               value={newProduct.name}
               onChange={(e) =>
@@ -77,7 +77,7 @@ const CreatePage = () => {
               }
             />
             <Button colorScheme={'blue'} onClick={handleAddProduct} w="full">
-              Add Product
+              Add Game
             </Button>
           </VStack>
         </Box>

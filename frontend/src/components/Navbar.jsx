@@ -28,7 +28,7 @@ const Navbar = () => {
           fontSize="3xl"
           fontWeight="bold"
         >
-          <Link to={'/'}>Product Store 🛒</Link>
+          <Link to={'/'}>GameHut 🛒</Link>
         </Text>
         <HStack>
           <Link to={'/create'}>

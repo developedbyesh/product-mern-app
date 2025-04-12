@@ -22,7 +22,7 @@ const HomePage = () => {
           textAlign={'center'}
           bgGradient={'linear(to-r, cyan.400, blue.500)'}
         >
-          Current Products 🚀
+          Current Games 🚀
         </Text>
 
         <SimpleGrid
@@ -44,14 +44,14 @@ const HomePage = () => {
             fontWeight={'bold'}
             color={'gray.600'}
           >
-            No Products Found 😢{' '}
+            No Games Found 😢{' '}
             <Link to={'/create'}>
               <Text
                 as="span"
                 color={'blue.500'}
                 _hover={{ textDecoration: 'underline' }}
               >
-                Create a product
+                Create a game
               </Text>
             </Link>
           </Text>
