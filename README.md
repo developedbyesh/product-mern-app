@@ -18,12 +18,6 @@
 - **Database:** MongoDB
 - **Others:** Zustand, React Router DOM
 
-## Screenshots
-
-_(Add your screenshots here if you have any)_
-
-## Getting Started
-
 ### Prerequisites
 
 - Node.js and npm
